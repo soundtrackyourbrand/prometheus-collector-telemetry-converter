@@ -5,10 +5,22 @@ defmodule PrometheusCollectorTelemetryConverter.MixProject do
     [
       app: :prometheus_collector_telemetry_converter,
       version: "0.1.0",
+      description: "Converts prometheus.erl collectors to telemetry events",
       elixir: "~> 1.9",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      package: package()
     ]
+  end
+
+  def package do
+    %{
+      licenses: ["MIT"],
+      links: %{
+        "GitHub" =>
+          "https://github.com/soundtrackyourbrand/prometheus-collector-telemetry-converter"
+      }
+    }
   end
 
   def application do
