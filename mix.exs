@@ -32,7 +32,8 @@ defmodule PrometheusCollectorTelemetryConverter.MixProject do
   defp deps do
     [
       {:telemetry_metrics, "~> 0.3"},
-      {:telemetry, "~> 0.4"}
+      {:telemetry, "~> 0.4"},
+      {:ex_doc, "~> 0.21", only: :dev}
     ]
   end
 end
