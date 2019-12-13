@@ -1,4 +1,6 @@
 defmodule PrometheusCollectorTelemetryConverter.Reporter do
+  import Telemetry.Metrics
+
   def metrics() do
     [
       last_value("erlang_vm.allocators",
